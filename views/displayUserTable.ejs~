@@ -1,0 +1,21 @@
+<% include header %> 
+ 
+
+ <% if(rs.length > 0){ %>
+      <table>
+             <tr><th>Users</th<th>password</th></tr>
+<% for (var i=0; rs.length > i; i++) { %>
+<tr>
+<td> <%= rs[i].username %></td>
+<td><%= rs[i].password %></td>
+</tr>
+<% } %>
+</table>
+<% } else { %>
+No users are entered into the database.
+<% } %>
+
+
+ 
+  <% include ex1 %> 
+<% include footer %> 
